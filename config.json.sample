@@ -1,6 +1,6 @@
 {
-  "API_URL": "http://localhost:82/vman/api/v1",
-  "BASE_URL": "http://localhost:82",
-  "API_URL_WS": "ws://localhost:82/vman/api/v1/ws",
+  "API_URL": "http://your-domain:82/vman/api/v1",
+  "BASE_URL": "http://your-domain:82",
+  "API_URL_WS": "ws://your-domain:82/vman/api/v1/ws",
   "DOCUMENTATION_URL": "https://vman3.vatools.net/docs/"
 }
