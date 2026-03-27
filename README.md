@@ -77,7 +77,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES=10
 cp config.json.sample config.json
 ```
 
-> NB: Not recommended to change values here unless you know what you're doing.
+> NB: update `http://your-domain:82` to point to your ip address or domain name of your server. 
 
 ### 5. Run the application
 > Uses pre-built images.
