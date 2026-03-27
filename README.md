@@ -79,14 +79,22 @@ cp config.json.sample config.json
 
 > NB: update `http://your-domain:82` to point to your ip address or domain name of your server. 
 
-### 5. Run the application
+### 5. Create vman-network accordingly:
+```bash
+docker network create vman3-net
+
+# Should get output similar to af3ad8ed8b85d47e7f331db4ed866b64694daee1bb9f898098b3e97a9eca9268
+
+```
+
+### 6. Run the application
 > Uses pre-built images.
 
 ```bash
 docker compose up -d
 ```
 
-### Optinal - Run documentation locally (Not Recommended)
+### 7. Optinal - Run documentation locally (Not Recommended)
 Ensure you're inside vman-deployment
 ```bash
 git clone  https://github.com/vman-tool/vman3-documentation
@@ -150,8 +158,8 @@ docker compose up -d --force-recreate
 
 ### Accessing Tools
 - **Swagger UI**: `http://localhost:82/vman/api/v1/docs`
-- **ArangoDB UI**: `http://localhost:82`
-- **Flower UI**: `http://localhost:82`
+- **ArangoDB UI**: `http://localhost:82/_db`
+- **Flower UI**: `http://localhost:82/flower`
 
 ---
 **Note**: For CCVA analysis, memory optimizations ("Fetch-in-Worker") are enabled by default through the `.env` and Celery worker settings.
