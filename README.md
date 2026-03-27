@@ -85,20 +85,6 @@ cp config.json.sample config.json
 ```bash
 docker compose up -d
 ```
-
-### 6. (Optional) For monitoring
-Create secure password file for nginx to serve monitoring service:
-```bash
-docker run --rm -it nginx:alpine htpasswd -cB -n your_username > .htpasswd
-```
-
-> Replace your_username with actual username.
-
-Verify if user was created:
-```bash
-cat .htpasswd
-# Should look like: your_username:$2y$05$AbC...
-```
 ---
 
 ## 🛠 Infrastructure Components
@@ -147,8 +133,6 @@ docker compose up -d --force-recreate
 - **Swagger UI**: `http://localhost:82/vman/api/v1/docs`
 - **ArangoDB UI**: `http://localhost:82`
 - **Flower UI**: `http://localhost:82`
-
-> Only after allowing these ports through docker compose file otherwise
 
 ---
 **Note**: For CCVA analysis, memory optimizations ("Fetch-in-Worker") are enabled by default through the `.env` and Celery worker settings.
