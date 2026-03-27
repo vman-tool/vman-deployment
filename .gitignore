@@ -1,0 +1,10 @@
+.htpasswd
+.env
+*.json
+
+ccva_files/
+settings_json/
+uploads/
+vman3db/
+ccva_files/
+uploads/
