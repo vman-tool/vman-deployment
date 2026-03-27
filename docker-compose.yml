@@ -13,6 +13,7 @@ services:
     restart: always
 
   frontend:
+    platform: linux/amd64
     image: ilyatuu/vman3_frontend
     # ports:
     #   - "4200:4200"
@@ -23,6 +24,7 @@ services:
     restart: always
 
   backend:
+    platform: linux/amd64
     container_name: backend
     image: ilyatuu/vman3_backend:latest
     command:
@@ -82,6 +84,7 @@ services:
 
   # Celery worker for background task processing (CCVA, ODK sync)
   celery-worker:
+    platform: linux/amd64
     container_name: celery-worker
     image: ilyatuu/vman3_backend:latest
     command:
