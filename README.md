@@ -85,6 +85,25 @@ cp config.json.sample config.json
 ```bash
 docker compose up -d
 ```
+
+### Optinal - Run documentation locally (Not Recommended)
+Ensure you're inside vman-deployment
+```bash
+git clone  https://github.com/vman-tool/vman3-documentation
+```
+- Update nginx.conf look for commented and uncomment
+```
+   # upstream docs_upstream {
+    #     zone arango 64k;
+    # }
+    #     server docs:3000 resolve;
+```
+- Then uncomment block `location /docs`
+
+- Go to docker compose and uncomment service `docs`
+
+Then run `docker compose up -d --build`
+
 ---
 
 ## 🛠 Infrastructure Components
