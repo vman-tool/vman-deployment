@@ -128,6 +128,18 @@ services:
       - celery-worker
     restart: always
 
+    
+#  Uncomment if you need local copy of the documentation (Not Recommended)
+#  Ensure nginx.conf is updated as well
+    
+# docs:
+#     build: ./vman3-documentation
+#     ports:
+#       - "3000:3000"
+#     networks:
+#       - default
+#     restart: always  
+
 
 volumes:
   vman3db:  # Database — managed by Docker, persists across restarts
